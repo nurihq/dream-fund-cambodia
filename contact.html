@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Donate — Dream Fund Cambodia</title>
+    <meta name="description" content="Get in touch with Dream Fund Cambodia. Donate, volunteer, or partner with us to help children in Cambodia's poorest communities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Dream Fund <span class="logo-accent">Cambodia</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Stories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="nav-cta">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="reveal">Get in Touch</h1>
+                <p class="reveal">Whether you'd like to donate, volunteer, or simply learn more — we'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid" id="contact">
+                    <div class="contact-info-card reveal">
+                        <h3>We'd love to hear from you.</h3>
+                        <p>Every message matters to us. Whether you want to make a donation, join a volunteer trip, or partner with our organisation — fill in the form and we'll get back to you personally within 48 hours.</p>
+                        
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">📧</div>
+                            <span>hello@dreamfundcambodia.org</span>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">📍</div>
+                            <span>Phnom Penh, Cambodia</span>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">🌐</div>
+                            <span>Operating across rural Cambodia</span>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">♡</div>
+                            <span>100% of donations go to supplies</span>
+                        </div>
+                    </div>
+
+                    <form class="contact-form reveal" id="contactForm"
+                        action="https://5osdsd7re7htcmddembdmucjv40ikqlo.lambda-url.us-east-1.on.aws/" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">I'd Like To...</label>
+                            <select id="subject" name="subject">
+                                <option value="">Select an option...</option>
+                                <option value="donate" selected>Make a Donation</option>
+                                <option value="volunteer">Volunteer on a Trip</option>
+                                <option value="partner">Partner With Us</option>
+                                <option value="question">Ask a Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us how you'd like to help, or ask us anything..." required></textarea>
+                        </div>
+
+                        <!-- HONEYPOT -->
+                        <div style="display:none;" aria-hidden="true">
+                            <label for="website_url">Leave this field blank</label>
+                            <input type="text" name="website_url" id="website_url" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <!-- Hidden fields -->
+                        <input type="hidden" name="domain" value="dreamfundcambodia.org">
+                        <input type="hidden" name="_redirect" value="https://dreamfundcambodia.org/#success">
+                        <input type="hidden" name="_subject" value="New enquiry from Dream Fund Cambodia website">
+
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <span>✓</span> Thanks! We'll be in touch within 48 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donate CTA -->
+        <section class="donate-cta">
+            <div class="container">
+                <h2 class="reveal">Every dollar makes a difference.</h2>
+                <p class="reveal">$5 provides a full supply pack. $25 equips a classroom. $100 helps an entire village. All donations go directly to purchasing supplies.</p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;" class="reveal">
+                    <a href="#contact" class="btn btn-donate">Donate $5 ♡</a>
+                    <a href="#contact" class="btn btn-donate">Donate $25 ♡</a>
+                    <a href="#contact" class="btn btn-donate">Donate $100 ♡</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <h2 class="reveal">Stay Connected</h2>
+                <p class="reveal">Join our newsletter for stories, updates, and ways you can help.</p>
+                <form class="newsletter-form reveal" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Dream Fund Cambodia</div>
+                    <p class="footer-desc">A grassroots charity bringing school supplies and joy to children in Cambodia's poorest communities.</p>
+                </div>
+                <div>
+                    <h4>Navigate</h4>
+                    <div class="footer-links-list">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="blog.html">Stories</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Get Involved</h4>
+                    <div class="footer-links-list">
+                        <a href="contact.html">Donate</a>
+                        <a href="contact.html">Volunteer</a>
+                        <a href="contact.html">Partner With Us</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-links-list">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter / X</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Dream Fund Cambodia. All rights reserved.</span>
+                <span>Made with ♡ for Cambodia's children.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn" aria-label="Close">&times;</button>
+            <div style="font-size: 3rem; margin-bottom: 16px;">✨</div>
+            <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 8px;">Message Sent!</h3>
+            <p style="color: var(--text-muted); margin-bottom: 24px; line-height: 1.5;">Thank you for reaching out. We'll get back to you within 48 hours.</p>
+            <button class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('successModal').classList.add('hidden')">Continue</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
