@@ -99,46 +99,16 @@ if (particlesContainer) {
 }
 
 // --- Contact form handling ---
+// The form submits natively (no JS interception) — the Lambda handles the
+// POST and redirects back to contact.html#success. We only show a brief
+// "Sending…" state while the browser navigates away.
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
+    contactForm.addEventListener('submit', function() {
         const submitBtn = document.getElementById('submitBtn');
         const btnText = submitBtn.querySelector('.btn-text');
-        const originalText = btnText.textContent;
-        
-        btnText.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        try {
-            const formData = new FormData(contactForm);
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: formData
-            });
-            
-            if (response.ok || response.redirected) {
-                // Show success modal
-                const modal = document.getElementById('successModal');
-                if (modal) {
-                    modal.classList.remove('hidden');
-                }
-                contactForm.reset();
-            } else {
-                throw new Error('Failed');
-            }
-        } catch (err) {
-            // Fallback: show inline success (form likely submitted via redirect)
-            const formSuccess = document.getElementById('formSuccess');
-            if (formSuccess) {
-                formSuccess.style.display = 'block';
-            }
-            contactForm.reset();
-        }
-        
-        btnText.textContent = originalText;
-        submitBtn.disabled = false;
+        if (btnText) btnText.textContent = 'Sending...';
+        if (submitBtn) submitBtn.disabled = true;
     });
 }
 
